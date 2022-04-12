@@ -41,20 +41,20 @@ module.exports = function (app) {
       });
     }
 
-    const conflicts = [];
+    const conflict = [];
     if (!validRow) {
-      conflicts.push("row");
+      conflict.push("row");
     }
     if (!validCol) {
-      conflicts.push("column");
+      conflict.push("column");
     }
     if (!validReg) {
-      conflicts.push("region");
+      conflict.push("region");
     }
 
     return res.json({
       valid: false,
-      conflict: conflicts,
+      conflict: conflict,
     });
   });
 
